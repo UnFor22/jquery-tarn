@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <!-- <div class="box" id="box3"></div> -->
+    <button id="btn">动起来</button>
+    <button id="btn1">标记动的元素</button>
+</body>
+<script src="./jquery.js"></script>
+<script>
+    // $('.box').eq(0).css('width',300) //过滤指定索引
+    // $('.box:first').css('width',200)  //选择第一个
+    // $('.box:not("#box3")').css('width',300) 
+    // $('.box:even').css('width',300) 
+    // $('.box:odd').css('width',300) 
+    // $('.box:gt(1)').css('width',300) //索引值大于某个值
+    // $('.box:lt(1)').css('width',300) //索引值小于某个值
+
+    function go(){
+        $('#box2').animate({width:300}, 1500, 'swing')
+        $('#box2').animate({width:100}, 1500, 'swing', go)
+    }
+    $('#btn').click(function(){
+        go()
+    })
+    $('#btn1').click(function(){
+        $(':animated').css({background: '#f00'}) // 选择所有运行中的元素
+    })
+</script>
+</html>

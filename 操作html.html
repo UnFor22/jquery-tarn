@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" width= '200'>
+        <span>一个span</span>
+    </div>
+</body>
+<script src="./jquery.js"></script>
+<script>
+    // let str = `<h1>标题</h1>`
+    // $(function(){
+    //     $('.box').html(str)
+    //     console.log($('.box').html())
+    // })
+
+    // console.log($('.box').html())
+    // document.querySelector('.box').innerHTML = str
+
+    // console.log(document.querySelector('.box').innerHTML) 
+    //  console.log(document.querySelector('.box').innerText) 
+    //  console.log(document.querySelector('.box').textContent) 
+
+    $(function(){
+        $('div').attr('width','800')
+        console.log($('.box').attr('width'))
+    })
+</script>
+</html>
